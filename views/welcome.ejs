@@ -1,0 +1,97 @@
+<!-- google font -->
+<link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
+<style type="text/css">
+    .container{
+        background: url('/img/welcomePage.jpg')center/cover fixed no-repeat;
+        /* align-items: center; */
+     }
+    .card{
+        background: linear-gradient(to right, rgba(37, 50, 59, 0.363), rgba(50, 50, 73, 0.397));
+        padding: 6rem 4rem;
+        border-radius: 20px;
+        margin-top: 2rem;
+        transition: all 1s ease-out;
+
+    }
+    .card:hover{
+        background-color: rgba(51, 49, 49, 0.7);
+    }
+    .card h1{
+        margin-bottom: 5rem;
+    }
+    .card p{
+        font-family: 'Amaranth', sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+    }
+    .card a{
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        font-family: 'Amaranth', sans-serif;
+        text-decoration: none;
+        color: white;
+        border-radius: 10px;
+        padding-top:1rem;
+        padding-bottom: 1rem; 
+    }
+    .btn1{
+        background-color: rgba(202, 66, 66, 0.883);
+        /* transition: all 1s ease-in-out; */
+    }
+    .btn1:hover{
+        background-color: rgb(214, 29, 13);
+    }
+    .btn1:active{
+        transform: translateY(4px);
+    }
+    .btn2{
+        background-color: rgba(69, 136, 175, 0.883);
+        /* transition: all 1s ease-in-out; */
+    }
+    .btn2:hover{
+        background-color: rgb(7, 175, 226);
+    }
+    .btn2:active{
+        transform: translateY(4px);
+    }
+    .btn5{
+    background-color: rgba(0, 127, 144, 0.705);
+    color: white;
+    position: absolute;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    right: 25px;
+    top: 25px;
+    border-radius: 8px;
+    border: none;
+    /* transition: all 0.7s ease-in-out; */
+    }
+    .btn5:hover{
+        text-decoration: none;
+        background-color: rgba(246, 1, 1, 0.924);
+        color: white;;
+        
+    }
+    .btn5:active{
+        background-color: #EB5757;
+        /* box-shadow: 0 5px #666; */
+        transform: translateY(4px);
+    }
+</style>
+
+<title>Create Account or Login</title>
+<body class="container" >
+    <a href="/" class="btn5">Home Page</a>
+    <div class="row mt-5">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body text-center">
+                <p>Create an Account or Login</p>
+                <h1><i class="fas fa-feather-alt fa-3x"></i></h1>
+                <a href="/users/register" class="btn1 btn-block mb-2">
+                    Register
+                </a>
+                <a href="/users/login" class="btn2  btn-block">Login</a>
+            </div>
+        </div>
+    </div>
+</body>

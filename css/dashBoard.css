@@ -1,0 +1,244 @@
+.bg-img{
+    /* background-image: linear-gradient(to right, #200122, #6f0000) */
+    background: url('/img/dashBoard.jpg')center/cover fixed no-repeat;
+}
+.checkOut, .row{
+    display: block;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+.checkOut{
+    width: 40%;
+}
+.row{
+    display: inline-block;
+    width: 60%;
+}
+.column{
+    width: 50%;
+    float: left;
+    padding: 5px;
+}
+.row:after{
+    content: "";
+    clear: both;
+    display: table;
+}
+@media screen and (max-width: 1200px) {
+    .checkOut{
+        width: 100%;
+        /* transform: translate3d(-100%, 0, 0); */
+    }
+    .row{
+        width: 100%
+    }
+}
+@media screen and (max-width: 600px) {
+    .shop-item-title{
+        font-size: 0.5rem;
+    }
+    .btn-danger{
+        font-size: 0.3rem;
+    }
+    .cart-item-title{
+        font-size: 0.3rem;
+    }
+    .btn-purchase{
+        font-size: 1rem;
+    }
+}
+.header{
+    color:rgb(250, 250, 250);
+    font-size: 2rem;
+}
+.btn1{
+    background-color: rgba(0, 127, 144, 0.705);
+    color: white;
+    position: absolute;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    right: 25px;
+    top: 25px;
+    border-radius: 8px;
+    border: none;
+    /* transition: all 0.7s ease-in-out; */
+}
+.btn1:hover{
+    text-decoration: none;
+    background-color: rgba(246, 1, 1, 0.924);
+    color: white;;
+    
+}
+.btn1:active{
+    background-color: #EB5757;
+    /* box-shadow: 0 5px #666; */
+    transform: translateY(4px);
+}
+.shop-item-image{
+    width: 280px;
+    height: 190px;
+    border-radius: 20px;
+    
+}
+.shop-item-title{
+    font-size: 1.3rem;
+}
+
+.item-title{
+    font-size: 1.3rem;
+}
+
+/* ===================================================================== */
+/* Check out section */
+/* Add to cart */
+.checkOut{
+    background: linear-gradient(to right, rgba(54, 53, 53, 0.534), rgba(36, 35, 35, 0.561));
+}
+.btn3{
+    width: 50px;
+    height: auto;
+    background-color: rgba(32, 133, 173, 0.774);
+    border-radius: 8px;
+    /* left: 15px; */
+    margin-left: 6.5rem;
+    margin-top: 0.5rem;
+    border: none; 
+    cursor: pointer;
+}
+.btn3:hover{
+    background-color: #014157;
+}
+.btn3:active{
+    transform: translateY(4px);
+}
+.shop-item-price{
+    flex-grow: 1;
+    font-size: 1.3rem;
+}
+.checkOut{
+max-width: 900px;
+margin: 0 auto;
+padding: 0 1.5rem;
+}
+.checkOut .icon{
+    color: rgba(87, 218, 235, 0.808);
+}
+.section-header{
+font-weight: normal;
+text-align: center;
+font-size: 2.5rem;
+margin-top: 30px;
+padding-top: 20px;
+}
+.btn-purchase{
+    padding-bottom: 20px;
+}
+.btn2{
+display: block;
+margin: 40px auto 80px auto;
+font-size: 1.4rem;
+padding: 0.5rem 1em;
+cursor: pointer;
+color: white;
+background-color: #1291bb;
+border-radius: .3em;
+border: none;
+font-weight: bold;
+/* transition: all 1s ease-in-out; */
+}
+.btn-purchase:active{
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+}
+.cart-header{
+font-weight: bold;
+font-size: 1.2rem;
+color: white;
+}
+.cart-row{
+display: flex;
+}
+.cart-column{
+display: flex;
+align-items: center;
+border-bottom: 1px solid white;
+margin-right: 1.5rem;
+padding-bottom: 10px;
+margin-top: 10px;
+}
+.cart-item{
+    width: 45%;
+}
+.cart-price{
+    width: 20%;
+    font-size: 1.2rem;
+    color: white;
+}
+.cart-quantity{
+    width: 35%;
+}
+
+.cart-item-title{
+    color: white;
+    margin-left: auto;
+    font-size: 0.8rem;
+}
+.cart-item-image{
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+.btn-danger{
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: 0.3rem;
+    font-weight: bold;
+}
+.btn-danger:active{
+    background-color: #EB5757;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.btn-danger:hover{
+    background-color: #cc4c4c;
+}
+
+.cart-quantity-input{
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 2px solid rgba(2, 246, 246, 0.787);
+    background-color: rgba(36, 33, 29, 0.637);
+    color: white;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-right: 25px;
+}
+.cart-row:last-child{
+    border-bottom: 1px solid white;
+}
+.cart-row:last-child .cart-column{
+    border: none;
+}
+.cart-total{
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.cart-total-title{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 20px;
+}
+.cart-total-price{
+    color: white;
+    font-size: 1.4rem;
+}

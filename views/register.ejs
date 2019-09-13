@@ -1,0 +1,142 @@
+<link href="https://fonts.googleapis.com/css?family=Amaranth|Sriracha&display=swap" rel="stylesheet">
+<style type="text/css">
+    .container{
+        background: url('/img/waterFall.jpg')center/cover fixed no-repeat;
+        font-family: 'Sriracha', cursive;
+    }
+    .card{
+        margin-top: 2rem;
+        background-color: rgba(93, 91, 91, 0.5);
+        border-radius: 20px;
+        transition: all 1s ease-in-out;
+    }
+    img{
+        
+        width: 7rem;
+        height: 7rem;
+        align-self: center;
+    }
+    .card:hover{
+        background-color: rgba(36, 32, 32, 0.8);
+    }
+    .btn{
+        font-size: 1.2rem;
+        padding: 0.8rem 3rem;
+        border-radius: 10px;
+    }
+    .btn:active{
+        transform: translateY(4px);
+    }
+    .btn1{
+    background-color: rgba(0, 127, 144, 0.705);
+    color: white;
+    position: absolute;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    right: 25px;
+    top: 25px;
+    border-radius: 8px;
+    border: none;
+    /* transition: all 0.7s ease-in-out; */
+    }
+    .btn1:hover{
+        text-decoration: none;
+        background-color: rgba(246, 1, 1, 0.924);
+        color: white;;
+        
+    }
+    .btn1:active{
+        background-color: #EB5757;
+        /* box-shadow: 0 5px #666; */
+        transform: translateY(4px);
+    }
+</style>
+
+<title>Register Page</title>
+<body class="container">
+    <a href="/" class="btn1">Home Page</a>
+    <div class="row mt-5">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body">
+                <img src="/img/script.svg" alt="" >
+    <!-- or you can use (inclued ./partials/messages.ejs) will get same result -->
+                <% if(typeof errors != 'undefined'){ %>
+                    <% errors.forEach(function(error){ %>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <%= error.msg %>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <% }); %>
+                <% } %>
+
+                <% if(success_msg != ''){ %>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <%= success_msg %>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+            <% } %>
+
+            <% if(error_msg != ''){ %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <%= error_msg %>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+        <% } %>
+                
+                <form action="/users/register" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input 
+                            type="name"
+                            id="name"
+                            name="name"
+                            class="form-control"
+                            placeholder="Enter Name"
+                            value="<%= typeof name != 'undefined' ? name: '' %>"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input 
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Enter Email Address"
+                            value="<%= typeof email != 'undefined' ? email: '' %>"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                            type="password"
+                            name="password"
+                            id="password"
+                            class="form-control"
+                            placeholder="create password"
+                            value="<%= typeof password != 'undefined' ? password: '' %>"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="password2">Confirm Password</label>
+                        <input 
+                            type="password"
+                            name="password2"
+                            id="password2"
+                            class="form-control"
+                            placeholder="confirm password"
+                            value="<%= typeof password != 'undefined' ? password: '' %>"/>
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-block">Register</button>
+                </form>
+                <p class="lead mt-4">
+                    Have an Account?
+                    <a href="/users/login">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>>

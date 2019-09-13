@@ -1,0 +1,98 @@
+<link href="https://fonts.googleapis.com/css?family=Amaranth|Sriracha&display=swap" rel="stylesheet">
+<style type="text/css">
+    .container{
+       background:url('/img/wall.jpg')center/ cover fixed no-repeat;
+       font-family: 'Sriracha', cursive;
+       font-size: 1.5rem;
+    }
+    .card{
+        background: rgba(114, 111, 111, 0.5);
+        padding: 6rem 4rem;
+        margin-top: 4rem;
+        transition: all 1s ease-in-out;
+        
+    }
+    .card:hover{
+        background-color: rgba(36, 31, 31, 0.801);
+        /* padding: 8rem 4rem; */
+    }
+    img{
+        widows: 100px;
+        height: 100px;
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+    .btn{
+        background-color: rgba(52, 117, 170, 0.794);
+        padding: 0.5rem 0;
+        font-size: 1.8rem;
+        border-radius: 20px;
+    }
+    .btn:hover{
+        background-color: rgba(7, 153, 250, 0.904);
+    }
+    .btn:active{
+        transform: translateY(4px);
+    }
+    .btn1{
+    background-color: rgba(0, 127, 144, 0.705);
+    color: white;
+    position: absolute;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    right: 25px;
+    top: 25px;
+    border-radius: 8px;
+    border: none;
+    /* transition: all 0.7s ease-in-out; */
+    }
+    .btn1:hover{
+        text-decoration: none;
+        background-color: rgba(246, 1, 1, 0.924);
+        color: white;;
+        
+    }
+    .btn1:active{
+        background-color: #EB5757;
+        /* box-shadow: 0 5px #666; */
+        transform: translateY(4px);
+    }
+</style>
+
+<title>Login Page</title>
+<body class="container">
+     <a href="/" class="btn1">Home Page</a>
+    <div class="row mt-5">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body">
+                <img src="/img/padlock.svg" alt="">
+                <% include ./partials/messages %>
+                <form action="/users/login" method="POST">
+                    <div class="form-group">
+                        <lable for="email">Email</lable>
+                        <input 
+                            type="email"
+                            id="email"
+                            name="email" 
+                            class="form-control"
+                            placeholder="Enter email address"/>
+                    </div>
+                    <div class="form-group">
+                        <lable for="password">Password</lable>
+                        <input 
+                            type="password"
+                            id="password"
+                            name="password" 
+                            class="form-control"
+                            placeholder="Enter password"/>
+                    </div>
+                    <button class="btn btn-block">Login</button>
+                </form>
+                <p class="lead mt-4">
+                    No Account? 
+                    <a href="/users/register">Register</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
